@@ -75,12 +75,7 @@ const styles = StyleSheet.create({
   content: {
     display: 'flex',
     flexDirection: 'column',
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    // width: Dimensions.get('window').width,
-    // height: Dimensions.get('window').height,
-    // width: 390,
-    // height: 844,
+    
   },
   linearGradient: {
     flex: 1,

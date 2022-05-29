@@ -80,7 +80,7 @@ const slides = [
     image: {
       uri:
         
-        'https://github.com/FFF2832/wkmidterm/blob/master/assets/hqheader.png?raw=true',
+        'https://github.com/zhiyu414/json/blob/master/image/intro1.png?raw=true',
     },
     logo1: {
       uri:
@@ -95,7 +95,7 @@ const slides = [
     image: {
       uri:
         
-      'https://github.com/FFF2832/wkmidterm/blob/master/assets/hqheader.png?raw=true',
+      'https://github.com/zhiyu414/json/blob/master/image/intro2.png?raw=true',
     },
     logo1: {
       uri:
@@ -110,7 +110,7 @@ const slides = [
     image: {
       uri:
         
-      'https://github.com/FFF2832/wkmidterm/blob/master/assets/hqheader.png?raw=true',
+      'https://github.com/zhiyu414/json/blob/master/image/intro3.png?raw=true',
     },
     logo1: {
       uri:

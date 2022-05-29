@@ -15,7 +15,7 @@ const ListItem = ({ title, navigation, destination }) => {
           borderColor: "#4F5B57",
           borderButtomWidth: 0.6,
         }}
-        _light={{ bg: "#E2D5C3" }}
+        _light={{ bg: "#FEFFEF" }}
         px="4"
         py="4"
         borderTopWidth={0}

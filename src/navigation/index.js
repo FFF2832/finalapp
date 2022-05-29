@@ -421,17 +421,7 @@ const DTypeStack = ({ navigation }) => {
             fontWeight: '400',
             fontSize: 20
           },
-          // headerLeft: () => (
-          //   Platform.OS == 'ios' ?
-          //     <></> :
-          //     <MaterialCommunityIcons
-          //       name={'menu'}
-          //       color={colorMode == 'light' ? 'black' : 'white'}
-          //       size={20}
-          //       onPress={() => navigation.openDrawer()}
-          //       style={{ marginRight: 20 }}
-          //     />
-          // ),
+         
         }}
       />
       <Stack.Screen
