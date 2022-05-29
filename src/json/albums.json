@@ -1,0 +1,60 @@
+{
+   "albumTitle": "Taylor Swift",
+   "albumList": [
+     
+      {
+         "title": "我喜歡的書",
+         "artist": "Taylor Swift",
+         "url": "https://www.amazon.com/Speak-Now-Taylor-Swift/dp/B003WTE886",
+         "image": "https://images.twgreatdaily.com/images/image/gl8/gl86TXUBLq-Ct6CZxZsk.jpg",
+         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
+         "price": 11.45,
+         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+      },
+      {
+         "title": "最近喜歡的歌",
+         "artist": "Taylor Swift",
+         "url": "https://www.amazon.com/Red-Taylor-Swift/dp/B008XNZMOU",
+         "image": "https://raw.githubusercontent.com/zhiyu414/Imaa/main/song%202.png",
+         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
+         "price": 12.49,
+         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+      },
+      {
+         "title": "最近追的劇",
+         "artist": "Taylor Swift",
+         "url": "https://www.amazon.com/Red-Taylor-Swift/dp/B008XNZMOU",
+         "image": "https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.18172-8/15578321_1246519122053008_5043314708872425997_o.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=uk3CtbSvleAAX98CTgs&_nc_ht=scontent.ftpe3-2.fna&oh=00_AT8xaNWqsfdNUgrQ4x6THuFwLIHK1CMzChbBeplrQgm1fQ&oe=627E6BE7",
+         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
+         "price": 12.49,
+         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+      },
+      {
+         "title": "好吃的甜點店",
+         "artist": "Taylor Swift",
+         "url": "https://www.amazon.com/Red-Taylor-Swift/dp/B008XNZMOU",
+         "image": "https://github.com/FFF2832/wkmidterm/blob/master/src/images/food.jpg?raw=true",
+         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
+         "price": 12.49,
+         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+      },
+      {
+         "title": "運動番推薦",
+         "artist": "Taylor Swift",
+         "url": "https://www.amazon.com/Red-Taylor-Swift/dp/B008XNZMOU",
+         "image": "https://images.alphacoders.com/694/thumb-1920-694328.png",
+         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
+         "price": 12.49,
+         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+      },
+      {
+         "title": "旅行過的地方",
+         "artist": "Taylor Swift",
+         "url": "https://www.amazon.com/Red-Taylor-Swift/dp/B008XNZMOU",
+         "image": "https://www.newamazing.com.tw/eWeb_newamazing/IMGDB/000206/000227/000257/00005545.JPG",
+         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
+         "price": 12.49,
+         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+      }
+    
+]}

@@ -1,15 +1,14 @@
 {
   "expo": {
-    "name": "finalapp",
-    "slug": "finalapp",
+    "name": "14Persnote app",
+    "slug": "14persnote-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "https://github.com/zhiyu414/Imaa/blob/main/logo1.png?raw=true",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E2D5C3"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -28,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Persnote app",
+    "githubUrl": "https://github.com/FFF2832/wkmidterm"
   }
 }
