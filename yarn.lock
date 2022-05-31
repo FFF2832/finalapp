@@ -5624,6 +5624,13 @@ react-native-linear-gradient@^2.5.6:
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
+react-native-modal-dropdown@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-modal-dropdown/-/react-native-modal-dropdown-1.0.2.tgz#3e1efae5a5eacc42f44ac96468ea2f1b5bb0d759"
+  integrity sha512-X13RbwoQdaOb9Ffi7fjRVwh9OXauXIJhum0uXGzYZLMyoCQ5yt5cxf27P/YZbdh80Fb7bdPx6vTA4PTpUK2WDQ==
+  dependencies:
+    prop-types "^15.6.0"
+
 react-native-reanimated@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.3.1.tgz#c7abad48f9e6c84610b0d5e270088ecd61750382"
