@@ -44,8 +44,10 @@
 import React from "react";
 import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable,Center ,ScrollView } from "native-base"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../redux/features/cartSlice";
 const AlbumDetail = ({ album, navigation }) => {
+  const dispatch = useDispatch();
   return (
     <Box 
     flex={1}
@@ -88,12 +90,22 @@ const AlbumDetail = ({ album, navigation }) => {
               style={{fontSize:12,color:"#A5A5A5"}}
             >{album.gender}</Text>  
             </VStack>
-
-            <Box w={8} h={8} borderRadius={20} bgColor="#F9E6A1" position="absolute" top={35} right={-138}>
-            <Box position="absolute" top={1} right={1}>
-            <MaterialCommunityIcons name="heart-outline" color="#574E45" size={25} />
-            </Box>
-            </Box>
+            <Pressable
+             onPress={() => {
+              dispatch(addToCart(album));
+            }}
+            >
+              <Box w={8} h={8} borderRadius={20} bgColor="#F9E6A1" position="absolute" top={35} right={-138}>
+                  <Box position="absolute" top={1} right={1}>
+                    <MaterialCommunityIcons name="heart-outline" color="#574E45" size={25} />
+                  </Box>
+                </Box>
+            </Pressable>
+                {/* <Box w={8} h={8} borderRadius={20} bgColor="#F9E6A1" position="absolute" top={35} right={-138}>
+                  <Box position="absolute" top={1} right={1}>
+                    <MaterialCommunityIcons name="heart-outline" color="#574E45" size={25} />
+                  </Box>
+                </Box> */}
           </HStack >
           
         </Pressable>

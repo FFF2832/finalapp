@@ -4,7 +4,8 @@ import React,{useState} from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { View,Text,Button,Image,StyleSheet} from 'react-native';
 import { NativeBaseProvider,AspectRatio } from 'native-base';
-
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
 
 import Navigation from './src/navigation';
 
@@ -39,22 +40,27 @@ const App = () => {
     <>
     {
       showRealApp?(
-        <SafeAreaProvider>
-            <View flex={1}>
-              
-               <NativeBaseProvider>
+        <Provider store={store}>
+              <NativeBaseProvider>
           
-             {/* <Intro/> */}
-               <Navigation />
-           </NativeBaseProvider>
-           {/* <Button
-              title="app"
-              onPress={()=>showRealApp(false)}
-              /> */}
+                {/* <Intro/> */}
+                  <Navigation />
+              </NativeBaseProvider>
+        </Provider>
+        
+        // <SafeAreaProvider>
+        //     <View flex={1}>
+              
+        //        <NativeBaseProvider>
+          
+        //      {/* <Intro/> */}
+        //        <Navigation />
+        //    </NativeBaseProvider>
+     
                 
-            </View>
+        //     </View>
 
-        </SafeAreaProvider>
+        // </SafeAreaProvider>
       ):(
         < AppIntroSlider
         data={slides}
