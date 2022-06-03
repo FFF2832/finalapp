@@ -1,6 +1,7 @@
 {
     "albumList": 
     [{
+   "id":"110912",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1653312038.jpg",
     "name": "浪亞當",
     "birthday": "約2022年3月出生",
@@ -19,6 +20,7 @@
     "special_notice":"幼犬一天四餐"
  },
  {
+   "id":"110913",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1653125390.jpg",
     "name": "浪小礫",
     "birthday": "約2022年3月出生",
@@ -37,6 +39,7 @@
     "special_notice":"幼犬一天四餐"
  },
  {
+   "id":"110914",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1653465326.jpg?raw=true",
     "name": "浪皮皮",
     "birthday": "約2015年出生",
@@ -55,6 +58,7 @@
     "special_notice":"一開始比較緊張,熟了就好,喜歡拍屁屁,不喜歡抱。"
  },
  {
+   "id":"110915",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1652410613.jpg",
     "name": "浪莫娜",
     "birthday": "約2012年1月出生",

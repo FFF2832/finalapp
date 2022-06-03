@@ -1,6 +1,7 @@
 {
     "albumList": 
 [{
+   "id":"110901",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1651648703.jpg?raw=true",
     "name": "浪玲玲",
     "birthday": "約2021年10月出生",
@@ -19,6 +20,7 @@
     "special_notice":""
  },
  {
+   "id":"110902",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1637461658.jpg",
     "name": "浪可可",
     "birthday": "約2018年出生",
@@ -37,6 +39,7 @@
     "special_notice":"1.他有口炎問題（醫生說是在外流浪+體質問題,牙齦比較容易紅腫)2.他氣管敏感變天會打噴嚏;這2個問題吃保健食品都能改善,沒有傳染的疑慮。#血檢都有通過⋯沒有傳染病問題。健檢就白血球有點高⋯因為牙炎問題，以打過抵抗力針⋯降低他的不適。"
  },
  {
+   "id":"110903",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1646192549.jpg",
     "name": "浪魚魚",
     "birthday": "約2020年出生",
@@ -55,6 +58,7 @@
     "special_notice":"口炎"
  },
  {
+   "id":"110904",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1647647713.jpg?raw=true",
     "name": "浪爽爽",
     "birthday": "約2019年出生",
@@ -73,6 +77,7 @@
     "special_notice":""
  },
  {
+   "id":"110905",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1651648934.jpg",
     "name": "浪菊妹",
     "birthday": "約2020年出生",
@@ -91,6 +96,7 @@
     "special_notice":"不愛喝水 不愛罐罐 愛飼料…… 建議一天一餐濕食，從小呼吸道不好 變天也會打噴嚏，需注意保暖。"
  },
  {
+   "id":"110906",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1648522232.jpg?raw=true",
     "name": "浪噹噹",
     "birthday": "約2021年10月出生",
@@ -109,6 +115,7 @@
     "special_notice":"妹妹較膽小會依賴哥哥，從小相依為命感情好。"
  },
  {
+   "id":"110907",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1651647294.jpg?raw=true",
     "name": "浪菜菜",
     "birthday": "約2021年10月出生",
@@ -127,6 +134,7 @@
     "special_notice":""
  },
  {
+   "id":"110908",
     "image":"https://raw.githubusercontent.com/zhiyu414/json/master/image/album_img_1651648958.jpg",
     "name": "浪洋芋",
     "birthday": "約2021年10月出生",
@@ -145,6 +153,7 @@
     "special_notice":""
  },
  {
+   "id":"110909",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1651647269.jpg?raw=true",
     "name": "浪肉肉",
     "birthday": "約2021年10月出生",
@@ -163,6 +172,7 @@
     "special_notice":""
  },
  {
+   "id":"110910",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1652412013.jpg?raw=true",
     "name": "浪船長",
     "birthday": "約2020年出生",
@@ -181,6 +191,7 @@
     "special_notice":"缺少右眼 會有分泌物 需要清潔"
  },
  {
+   "id":"110911",
     "image":"https://github.com/zhiyu414/json/blob/master/image/album_img_1652412124.jpg?raw=true",
     "name": "浪菠菠",
     "birthday": "約2021年出生",

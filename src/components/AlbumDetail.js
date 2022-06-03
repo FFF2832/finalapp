@@ -41,26 +41,48 @@
 //   )};
 
 // export default AlbumDetail;
-import React from "react";
+import React, {useEffect, useState } from "react";
 import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable,Center ,ScrollView } from "native-base"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/features/cartSlice";
+import {Animated,View}from "react-native";
 const AlbumDetail = ({ album, navigation }) => {
   const dispatch = useDispatch();
+ 
+  
+  const AnimatedIcon=Animated.createAnimatedComponent(MaterialCommunityIcons);
+  const [liked,setliked]=useState(false);
+  const [visible,setVisible]=useState(false);
+  const currentValue =new Animated.Value(1);
+  useEffect(()=>{
+    if(liked==true){
+      Animated.spring(currentValue,{
+        toValue:2,
+        friction:2
+      }).start(()=>{
+        Animated.spring(currentValue,{
+          toValue:1
+        }).start(()=>{
+          setVisible(false)
+        })
+      })
+    }
+    
+  },[liked])
   return (
     <Box 
     flex={1}
     _dark={{ bg: "#4F5B57" }}
     _light={{ bg: "#FEFFEF" }}
             
-> 
+  > 
 <ScrollView>
     <Box
       marginLeft={29} marginRight={29} marginTop={5} borderRadius={4} shadow={2} 
       _dark={{ borderColor: 'blueGray.500', borderWidth: 0.6 }}  
     >
-      
+     
       <HStack  p={1} _dark={{ bg: "blueGray.900" }}
         _light={{ bg: "white" }}>
           
@@ -69,7 +91,22 @@ const AlbumDetail = ({ album, navigation }) => {
         >
           
           <HStack  >
-         
+              {visible &&
+                    <AnimatedIcon  
+                    style={{
+                    position:"absolute",
+                    top:30,
+                    
+                    left:"70%",
+                    elevation:4,
+                    zIndex:3,
+                    transform:[
+                      {scale:currentValue}
+                    ]
+              }}
+              name="heart" size={50} color="red"/>      
+              }
+              
             <Image
               source={{ uri: album.image }}
               alt="dog"
@@ -97,7 +134,49 @@ const AlbumDetail = ({ album, navigation }) => {
             >
               <Box w={8} h={8} borderRadius={20} bgColor="#F9E6A1" position="absolute" top={35} right={-138}>
                   <Box position="absolute" top={1} right={1}>
-                    <MaterialCommunityIcons name="heart-outline" color="#574E45" size={25} />
+                  
+                    <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
+                    color="#574E45"
+                     size={25} 
+                     style={{
+                      
+                     }}
+                    onPress={() => {
+                      setliked(!liked);
+                      if(liked==false){
+                        setVisible(true);
+                      }
+                      
+                      
+                      dispatch(addToCart(album));
+                    }}
+                    />
+                    {/* {like?
+                    <MaterialCommunityIcons
+                    name={'heart-outline'}
+                    color={'#EA9C49'}
+                    size={30}
+                    
+                    />:<MaterialCommunityIcons
+                    name={'heart'}
+                    color={'#EA9C49'}
+                    size={30}
+                    
+                    />
+                  } */}
+                  {/* <MaterialCommunityIcons
+                   style={{
+            
+                      color: anime.isFavorite ? 'tomato' : 'black'
+                     }}
+                   name={
+                    anime.isFavorite ? iconType('heart') : iconType('heart-outline')
+                    }
+                    color="#000"
+                    size={24}
+                    onPress={() => {
+                      }}
+                    /> */}
                   </Box>
                 </Box>
             </Pressable>

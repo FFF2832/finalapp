@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+// import React, { useState } from "react";
 const initialState = [];
 
 const cartSlice = createSlice({
@@ -7,10 +7,12 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart(state, { payload }) {
+
       //   console.log(payload);
       //uid is the unique id of the item
       const { id } = payload;
-
+      
+     
       const find = state.find((item) => item.id === id);
       if (find) {
         return state.map((item) =>
@@ -27,6 +29,8 @@ const cartSlice = createSlice({
           quantity: 1,
         });
       }
+      
+
     },
     increment(state, { payload }) {
       return state.map((item) =>
@@ -49,9 +53,7 @@ const cartSlice = createSlice({
       );
     },
     removeItem: (state, action) => {
-      //   console.log(state);
-      //   console.log(state);
-      //   console.log(action);
+      
       const itemId = action.payload;
       return state.filter((item) => item.id !== itemId);
     },
