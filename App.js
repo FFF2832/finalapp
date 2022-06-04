@@ -24,7 +24,7 @@ const App = () => {
     return (
       <View style={{flex:1,alignContent:"center",justifyContent:"center" ,backgroundColor:'#E2D5C3'
       }}>
-        <Image source={ item.logo1 }  style={styles.introLogoStyle}/>
+        {/* <Image source={ item.logo1 }  style={styles.introLogoStyle}/> */}
         <Text   style={styles.introTextStyle}>{item.title}</Text>
         
         <Image source={ item.image }  style={styles.introImageStyle}/>
@@ -82,7 +82,7 @@ const slides = [
   {
     key: 's1',
     text: '',
-    title: '準備開始記錄生活了嗎?',
+    title: '',
     image: {
       uri:
         
@@ -96,7 +96,7 @@ const slides = [
   },
   {
     key: 's2',
-    title: '在這裡可以收集你的各種興趣!',
+    title: '',
     text: '',
     image: {
       uri:
@@ -111,7 +111,7 @@ const slides = [
   },
   {
     key: 's3',
-    title: '開始旅程吧!',
+    title: '',
     text: '',
     image: {
       uri:

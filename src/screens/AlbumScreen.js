@@ -6,9 +6,9 @@ import albumData from "../json/dog.json";
 
 const AlbumScreen = ({ navigation }) => {
   return (
-    <Box _dark={{ bg: "blueGray.900" }}
+    <Box _dark={{ bg: "#574E45" }}
     _light={{ bg: "#FEFFEF" }}>
-      <ScrollView>
+      {/* <ScrollView>
        <AlbumList 
        
         list={albumData.albumList}
@@ -16,7 +16,16 @@ const AlbumScreen = ({ navigation }) => {
        
        
       />
-     </ScrollView>
+     </ScrollView> */}
+    
+       <AlbumList 
+       
+        list={albumData.albumList}
+        navigation={navigation}
+       
+       
+      />
+     
     </Box>
   );
 };

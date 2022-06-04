@@ -3,7 +3,7 @@ import { Linking } from 'react-native';
 import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HStack ,VStack} from "native-base";
 
 
-const DetailScreen = ({ route}) => {
+const CatDetailScreen = ({ route}) => {
   const { name,
     birthday,
     gender,
@@ -14,8 +14,8 @@ const DetailScreen = ({ route}) => {
     cat_close,
     dog_close,
     microchip,
-    ytest,
-    otest,
+    bodytest,
+    state,
     bug_inside,
     bug_ousitde,
     special_notice,
@@ -114,15 +114,15 @@ const DetailScreen = ({ route}) => {
          <HStack >
              <Box w={2} h={5} bgColor="#ECD563"  marginRight={2}/>
              <Text fontSize={15} bold>
-               <Text fontWeight="normal">幼犬(2-6個月)驗腸炎、犬瘟快篩是否通過：</Text>
-               {ytest}
+               <Text fontWeight="normal">血檢快篩貓瘟、貓白血、貓愛滋是否通過：</Text>
+               {bodytest}
              </Text>
            </HStack>
            <HStack marginTop={2}>
              <Box w={2} h={5} bgColor="#ECD563"  marginRight={2}/>
              <Text fontSize={15} bold >
-               <Text fontWeight="normal">成犬(6個月以上)心絲蟲、艾莉希、萊姆病、伊文氏艾莉希體是否通過：</Text>
-               {otest}
+               <Text fontWeight="normal">目前狀態：</Text>
+               {state}
              </Text>
            </HStack>
 
@@ -194,4 +194,4 @@ const DetailScreen = ({ route}) => {
   );
 }
 
-export default DetailScreen;
+export default CatDetailScreen;

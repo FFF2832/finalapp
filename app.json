@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "https://github.com/zhiyu414/Imaa/blob/main/logo1.png?raw=true",
+      "image": "https://github.com/zhiyu414/finalapp/blob/master/src/images/splash.png?raw=true",
       "resizeMode": "contain",
       "backgroundColor": "#E2D5C3"
     },

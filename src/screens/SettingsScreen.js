@@ -1,5 +1,5 @@
 import React from "react";
-import { Box ,Image,Center,Text,HStack} from "native-base";
+import { Box ,Image,Center,Text,HStack, useColorMode} from "native-base";
 import { Linking,Pressable,ScrollView } from 'react-native';
 
 import ListItem from "../components/ListItem"
@@ -9,27 +9,29 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 import AlbumList from "../components/AlbumList";
 import albumData from "../json/albums.json";
 const SettingsScreen = ({ navigation }) => {
+    const { colorMode } = useColorMode();
     return (
        
         <Box 
             flex={1}
-            _dark={{ bg: "#4F5B57" }}
-            _light={{ bg: "#FEFFEF" }}        
+            _dark={{ bg: "#574E45" }}
+            _light={{ bg: "#FEFFEF" }}    
+            
         >
-            <ScrollView>
+            <ScrollView  >
                 <Center>
                 
                 <Image
                     margin="0"
-                    width="390"
-                    height="215"
+                    width="100%"
+                    height="100%"
                     
                     
                     paddingRight={4}
-                    position= "absolute" style={{elevation:2}}
+                    position= "absolute"
                     marginTop={0}
                     
-                source={{ uri: "https://github.com/FFF2832/finalapp/blob/master/src/images/Vector%201.png?raw=true" }}
+                    source={{ uri: colorMode=="light"?"https://github.com/FFF2832/finalapp/blob/master/src/images/Vector%201.png?raw=true":"https://raw.githubusercontent.com/zhiyu414/json/master/image/Vector%201%20(1).png" }}
                 alt="artist"
                 />
             
@@ -41,7 +43,7 @@ const SettingsScreen = ({ navigation }) => {
                     padding="2"
                     borderRadius="7"
                     paddingRight={4}
-                    marginTop={0}
+                    marginTop={3}
                     
                     
                 source={{ uri: "https://github.com/FFF2832/finalapp/blob/master/src/images/13055470_799656300178757_20778114455408489_n.png?raw=true" }}
@@ -51,90 +53,112 @@ const SettingsScreen = ({ navigation }) => {
             
         
         </Center>
-        <HStack  marginLeft={10}>
-            
+        <HStack  marginLeft={53} marginTop={5}>
+            <Pressable onPress={() => Linking.openURL("https://www.facebook.com/langlangdontcry")}>
                 <Image
                     margin="1"
-                    width="20"
-                    height="20"
-                    padding="2"
+                    width="57"
+                    height="57"
+                    style={{elevation:2}}
                     borderRadius="7"
-                    paddingRight={4}
+                    marginRight={58}
                     marginTop={0}
-                    marginLeft={5}
+                   
                     
                 source={{ uri: "https://github.com/zhiyu414/json/blob/master/image/%E6%8F%92%E5%9C%96.png?raw=true" }}
                 alt="artist"
                 />
+            </Pressable>
+            <Pressable onPress={() => Linking.openURL("https://www.instagram.com/langlangdontcry/")}>
                 <Image
                     margin="1"
-                    width="20"
-                    height="20"
-                    padding="2"
+                    width="57"
+                    height="57"
+                    style={{elevation:2}}
                     borderRadius="7"
-                    paddingRight={4}
+                    marginRight={58}
                     marginTop={0}
-                    marginLeft={5}
+                    
                     
                 source={{ uri: "https://github.com/zhiyu414/json/blob/master/image/%E6%8F%92%E5%9C%962.png?raw=true" }}
                 alt="artist"
                 />
+                </Pressable>
+            <Pressable onPress={() => Linking.openURL("https://www.youtube.com/channel/UCcPPwWthX9TSx6HZ0h8mVKg")}>
                 <Image
                     margin="1"
-                    width="20"
-                    height="20"
-                    padding="2"
+                    width="57"
+                    height="57"
+                    style={{elevation:2}}
                     borderRadius="7"
-                    paddingRight={4}
+                    
                     marginTop={0}
-                    marginLeft={5}
+                    
                     
                 source={{ uri: "https://github.com/zhiyu414/json/blob/master/image/%E6%8F%92%E5%9C%963.png?raw=true" }}
                 alt="artist"
                 />
+            </Pressable>
         </HStack>
+
         <Box 
-            mt="12" borderBottomWidth={1} borderColor="#FEFFEF"
-            _dark={{ bg:"#4F5B57", borderColor: '#4F5B57', borderButtomWidth: 0.6 }}
+            marginTop={5}
+            _dark={{ bg:"#574E45"}}
         >
-                <HStack justifyContent="flex-start" marginTop={3}>
-                <Center width="30" height="30"   position= "absolute"  style={{elevation:2}} flex="1" borderRadius="9" marginTop={3} marginLeft={5} 
-                _dark={{bg: "#4F5B57" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
-                <MaterialCommunityIcons name="storefront-outline" color="#000000"  size={26} />
+            <Pressable onPress={() => Linking.openURL("https://shop.langlangdontcry.com.tw/")}>
+            <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
+        _light={{ bg: "white" }}borderRadius={4} alignSelf="center" style={{elevation:2}}>
+                <HStack justifyContent="flex-start" marginTop={0}>
+                <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
+                _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
+                <MaterialCommunityIcons name="storefront-outline" color="#000000"  size={32} />
                 </Center>
 
-                <Text fontSize={15} marginLeft={60} marginTop={4}>線上商店</Text>
+                <Text fontSize={15} marginLeft={75} marginTop={6}>線上商店</Text>
             
             </HStack>
-            
-            
-            <HStack justifyContent="flex-start" marginTop={3}>
-                <Center width="30" height="30"   position= "absolute"  style={{elevation:2}} flex="1" borderRadius="9" marginTop={3} marginLeft={5} 
-                _dark={{bg: "#4F5B57" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
-                <MaterialCommunityIcons name="dog-side" color="#000000"  size={26} />
+            </Box>
+            </Pressable>
+            <Pressable onPress={() => Linking.openURL("http://www.langlangdontcry.com.tw/story.php")}>
+            <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
+        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2}} marginTop={30}>
+                <HStack justifyContent="flex-start" marginTop={0}>
+                <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
+                _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
+                <MaterialCommunityIcons name="dog-side" color="#000000"  size={32} />
                 </Center>
 
-                <Text fontSize={15} marginLeft={60} marginTop={3}>浪浪的事</Text>
+                <Text fontSize={15} marginLeft={75} marginTop={6}>浪浪的事</Text>
             
             </HStack>
-            <HStack justifyContent="flex-start" marginTop={7}>
-                <Center width="30" height="30"   position= "absolute"  style={{elevation:2}} flex="1" borderRadius="9" marginTop={3} marginLeft={5} 
-                _dark={{bg: "#4F5B57"}} _light={{bg:"#F1E9C3"}}> 
-                <MaterialCommunityIcons name="text-box-check" color="#000000"  size={26} />
+            </Box>
+            </Pressable>
+            <Pressable onPress={() => Linking.openURL("https://www.youtube.com/channel/UCcPPwWthX9TSx6HZ0h8mVKg")}>
+            <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
+        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2}} marginTop={30}>
+                <HStack justifyContent="flex-start" marginTop={0}>
+                <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
+                _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
+                <MaterialCommunityIcons name="text-box-check" color="#000000"  size={32} />
                 </Center>
 
-                <Text fontSize={15} marginLeft={60} marginTop={4}>領養條件</Text>
+                <Text fontSize={15} marginLeft={75} marginTop={6}>領養條件</Text>
             
             </HStack>
+            </Box>
+            </Pressable>
             <ListItem  title="切換主題"   navigation={navigation} destination="DisplaySetting" />
-        </Box>          
+        </Box> 
+        <Pressable>
         < MapList 
             list={albumData.albumList}
                 navigation={navigation}
-                marginTop={0}
-            bg="#FEFFEF"
     
-        /> 
+                    /> 
+        </Pressable>
+            
+                
+        
             </ScrollView> 
             
         </Box>

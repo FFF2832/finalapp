@@ -5,7 +5,7 @@ import MapDetail from "./MapDetail";
 import sections from "../json/type_section.json";
 
 
-const MapList = () => {
+const MapList = ({ album, navigation }) => {
   const renderSectionHeader = ({section}) => (
     
       <Center  _dark={{bg:"#4F5B57"}}>
@@ -18,7 +18,7 @@ const MapList = () => {
           horizontal={true}
           data={section.data}
          
-          renderItem={({ item }) => <MapDetail album={item} />}
+          renderItem={({ item }) => <MapDetail album={item} navigation={navigation}  />}
           showsHorizontalScrollIndicator={false}
           // keyExtractor={ item => item.title }
           keyExtractor={ item => item.title }
@@ -34,7 +34,7 @@ const MapList = () => {
       return null;
     }
 
-    return <MapDetail album={item} />
+    return <MapDetail album={item} navigation={navigation}  />
     
     
   };
