@@ -13,7 +13,7 @@ import { ScrollView } from 'react-native-gesture-handler';
    const AccountSettingScreen = ({navigation}) => {
    const [selectedIndex, setSelectedIndex] = useState(0);
    const { colorMode } = useColorMode();
-
+      
    const SegmentedContent = () => {
       if (selectedIndex == 1) {
          return (

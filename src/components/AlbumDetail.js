@@ -145,10 +145,12 @@ const AlbumDetail = ({ album, navigation }) => {
     if(liked==true){
       Animated.spring(currentValue,{
         toValue:2,
-        friction:2
+        friction:2,
+        useNativeDriver: true
       }).start(()=>{
         Animated.spring(currentValue,{
-          toValue:1
+          toValue:1,
+          useNativeDriver: true
         }).start(()=>{
           setVisible(false)
         })

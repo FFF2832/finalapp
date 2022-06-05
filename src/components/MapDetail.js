@@ -13,10 +13,10 @@ const MapDetail  = ({ album, navigation }) => {
   return (
     
 
-      <Box flex={1} justifyContent="center"  _dark={{bg:"#4F5B57"}} > 
-    <Center  paddingLeft={44} paddingTop={2} paddingRight={5} _dark={{bg:"#4F5B57"}}
+      <Box flex={1} justifyContent="center"  _dark={{bg:"#574E45"}} > 
+    <Center  paddingLeft={44} paddingTop={2} paddingRight={5} _dark={{bg:"#574E45"}}
       >
-      <Box width={277} height={0.5} bgColor="#4F5B57" marginBottom={10} _dark={{bg:"#fff"}}></Box> 
+      <Box width={277} height={0.5} bgColor="#574E45" marginBottom={10} _dark={{bg:"#fff"}}></Box> 
       <Box  flex="1"  >
       <Pressable 
           onPress={() => navigation.navigate('Map', album)}
@@ -40,8 +40,8 @@ const MapDetail  = ({ album, navigation }) => {
           
           /> */}
           
-          <Box width={277} height={0.5} bgColor="#4F5B57" marginTop={10} _dark={{bg:"#fff"}}></Box>   
-          <Box width={277} height={75}  marginTop={10} _dark={{bg:"#4F5B57"}}></Box>   
+          <Box width={277} height={0.5} bgColor="#574E45" marginTop={10} _dark={{bg:"#fff"}}></Box>   
+          <Box width={277} height={75}  marginTop={10} _dark={{bg:"#574E45"}}></Box>   
         {/* <Text marginTop={4}>{album.description}</Text> */}
     </Center>
     

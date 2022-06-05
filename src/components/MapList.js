@@ -8,7 +8,7 @@ import sections from "../json/type_section.json";
 const MapList = ({ album, navigation }) => {
   const renderSectionHeader = ({section}) => (
     
-      <Center  _dark={{bg:"#4F5B57"}}>
+      <Center  _dark={{bg:"#574E45"}}>
       <Text fontSize={20} marginTop={5} marginBottom={0}  color="#4F5B57" fontWeight="bold"  _dark={{ color:"#fff"}}>
         {section.title} 
       </Text>
