@@ -1,28 +1,3 @@
-// import React from "react";
-// import { Box , Text, Center, useColorMode,Image, ScrollView} from "native-base";
-// import AlbumList from "../components/AlbumList";
-// import albumData from "../json/dog.json";
-
-
-// const MapScreen = ({ navigation }) => {
-//   return (
-//     <Box _dark={{ bg: "#574E45" }}
-//     _light={{ bg: "#FEFFEF" }}>
-      
-    
-//        <AlbumList 
-       
-//         list={albumData.albumList}
-//         navigation={navigation}
-       
-       
-//       />
-     
-//     </Box>
-//   );
-// };
-
-// export default MapScreen;
 import { useState } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import { SafeAreaProvider } from 'react-native-safe-area-context';

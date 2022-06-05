@@ -357,17 +357,17 @@
 // }
 
 // export default Navigation;
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Animated, Dimensions, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+import React,{ useRef }  from 'react';
+import { Animated, Dimensions,  Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 // Font Awesome Icons...
 import { FontAwesome5 } from '@expo/vector-icons'
-import { useRef } from 'react';
+
 import { NavigationContainer, useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -400,7 +400,7 @@ import ActionButton from '../components/ActionButton';
 import albumData from "../json/albums.json";
 
 const Tab = createBottomTabNavigator();
-
+const Stack = createNativeStackNavigator();
 // Hiding Tab Names...
 export default function index() {
   // Animated Tab Indicator...
@@ -434,12 +434,14 @@ export default function index() {
 
           // Tab ICons....
         }
-        <Tab.Screen name={"Home"} component={HomeScreen} options={{
+        <Tab.Screen name="HomeStack" component={HomeStack} options={{
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...
               position: 'absolute',
-              top: 20
+              top: 20,
+              
             }}>
               <FontAwesome5
                 name="home"
@@ -458,7 +460,7 @@ export default function index() {
           }
         })}></Tab.Screen>
 
-        <Tab.Screen name={"Search"} component={SearchScreen} options={{
+        <Tab.Screen name={"Search"} component={DTypeScreen} options={{
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...
@@ -483,14 +485,11 @@ export default function index() {
         })}></Tab.Screen>
 
 
-        {
-
-          // Extra Tab Screen For Action Button..
-        }
+       
 
         
 
-        <Tab.Screen name={"Notifications"} component={NotificationScreen} options={{
+        <Tab.Screen name={"Notifications"} component={ MenuScreen} options={{
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...
@@ -515,7 +514,8 @@ export default function index() {
           }
         })}></Tab.Screen>
 
-        <Tab.Screen name={"Settings"} component={SettingsScreen} options={{
+        <Tab.Screen name={"Settings"} component={SettingsStack} options={
+          {headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={{
               // centring Tab Button...
@@ -561,6 +561,135 @@ export default function index() {
   );
 }
 
+const HomeStack = ({ navigation }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator
+    // screenOptions={{
+    //   headerShown: false
+    // }}
+    >
+      <Stack.Screen
+        name="Home"
+        component={AccountSettingScreen}
+        options={{
+          title: "浪浪別哭",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          
+        }}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={DetailScreen}
+        options={{
+          title: "詳細",
+          headerStyle: {
+            backgroundColor: '#F9E6A1',
+          },
+          headerTintColor: colorMode == 'light' ? 'black' : 'white',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        }}
+      />
+      <Stack.Screen
+        name="CatDetail"
+        component={CatDetailScreen}
+        options={{
+          title: "詳細",
+          headerStyle: {
+            backgroundColor: '#F9E6A1',
+          },
+          headerTintColor: colorMode == 'light' ? 'black' : 'white',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        }}
+      />
+      
+    </Stack.Navigator>
+    
+  );
+}
+const SettingsStack = ({ navigation }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="資訊"
+        component={SettingsScreen}
+        options={{
+          title: "Settings",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          
+        }}
+      />
+      <Stack.Screen
+        name="DisplaySetting"
+        component={DisplaySettingScreen}
+        options={{
+          title: "切換主題",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTintColor: colorMode == 'light' ? 'black' : 'white',
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Map"
+        component={MapScreen}
+        options={{
+          title: "地圖",
+          headerStyle: {
+            backgroundColor: '#F9E6A1',
+          },
+          headerTintColor: colorMode == 'light' ? 'black' : 'white',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        }}
+      />
+     
+
+    </Stack.Navigator>
+  );
+}
 function getWidth() {
   let width = Dimensions.get("window").width
   // Horizontal Padding = 20...
@@ -570,44 +699,44 @@ function getWidth() {
   return width / 5
 }
 
-function EmptyScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    </View>
-  );
-}
+// function EmptyScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//     </View>
+//   );
+// }
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+// function SettingsScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Settings!</Text>
+//     </View>
+//   );
+// }
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+// function HomeScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Home!</Text>
+//     </View>
+//   );
+// }
 
-function NotificationScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
-    </View>
-  );
-}
+// function NotificationScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Notifications!</Text>
+//     </View>
+//   );
+// }
 
-function SearchScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Search!</Text>
-    </View>
-  );
-}
+// function SearchScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Search!</Text>
+//     </View>
+//   );
+// }
 
 const styles = StyleSheet.create({
   container: {

@@ -54,63 +54,105 @@ import { ScrollView } from 'react-native-gesture-handler';
                     <Center>
                     <Box w={332} h={0.5}_dark={{ bg: "#fff" }}_light={{ bg: "#0B0A09" }}marginTop={4}/>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>紅牌蒂蒂海鮮燉飯                                      $270</Text>
+                     <HStack>
+                     <Text  bold fontSize={15}>紅牌蒂蒂海鮮燉飯</Text>
+                     <Text bold fontSize={15} marginLeft={135}> $270</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋葱碎/蒜碎/透抽/鮮蝦/綜合蔬菜/蛤媽</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>白白的奶油白醬燉飯（五辛素）            $260</Text>
+                     <HStack>
+                     <Text  bold fontSize={15}>白白的奶油白醬燉飯（五辛素)</Text>
+                     <Text bold fontSize={15} marginLeft={50}> $260</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">鮮菇/杏鲍菇/蔥菇/粽合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>唐揚咖哩雞飯                                              $270</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>唐揚咖哩雞飯</Text>
+                     <Text bold fontSize={15} marginLeft={165}> $270</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">吉揚雞塊!滑嫩蛋包/洋蔥碎/蒜碎/蔥菇片/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>泡菜(豬肉/牛肉)燉飯                                $270</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>泡菜(豬肉/牛肉)燉飯</Text>
+                     <Text bold fontSize={15} marginLeft={110}> $270</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5" >洋恧碎/慹碎/韓式泡菜/辣醬/豬or牛肉片/起司片/綜{"\n"}合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>南洋牛肉飯                                                   $280</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>南洋牛肉飯</Text>
+                     <Text bold fontSize={15} marginLeft={180}> $280</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/綜合蔬菜/蘑菇/檸檬/牛肉片</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>火辣豬豬飯                                                     $270</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>火辣豬豬</Text>
+                     <Text bold fontSize={15} marginLeft={195}> $270</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/綜合蔬菜/蘑菇/牛番茄/豬絞肉</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>班班首選青醬雞腿排飯                                 $270</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>班班首選青醬雞腿排</Text>
+                     <Text bold fontSize={15} marginLeft={115}> $260</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋洋葸碎/蒜碎/綜合蔬菜/杏鮑菇/炸雞腿排</Text>
                     </Box>
 
                     <Box w={332} h={0.5}_dark={{ bg: "#fff" }} _light={{ bg: "#0B0A09" }}marginTop={4}/>
 
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>南洋雞肉義大利麵                                        $270</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>南洋雞肉義大利麵</Text>
+                     <Text bold fontSize={15} marginLeft={130}> $270</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/蘑菇/雞肉/檸檬/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>田園青醬義大利麵（五辛素）                    $260</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>田園青醬義大利麵（五辛素）</Text>
+                     <Text bold fontSize={15} marginLeft={52}> $260</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">蕃茄/核桃/綜合菇/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>紅牌蒂蒂海鮮義大利麵                                $280</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>紅牌蒂蒂海鮮義大利麵</Text>
+                     <Text bold fontSize={15} marginLeft={97}> $280</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/杏鮑菇/鮮蝦/透抽/蛤蠾/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>班班首選青醬蝦義大利麵                            $290</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>班班首選青醬蝦義大利麵</Text>
+                     <Text bold fontSize={15} marginLeft={82}> $290</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/鮮蝦/杏鮑菇/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>火辣豬豬義大利麵                                         $280</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>火辣豬豬義大利麵</Text>
+                     <Text bold fontSize={15} marginLeft={125}> $280</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/蘑菇/牛番茄/豬絞肉</Text>
                     </Box>
                     <Box marginTop={5} w={326}> 
-                     <Text  bold fontSize={15}>白醬海鮮義大利麵                                         $280</Text>
+                    <HStack>
+                     <Text  bold fontSize={15}>白醬海鮮義大利麵</Text>
+                     <Text bold fontSize={15} marginLeft={123}> $280</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/杏鮑菇/鮮蝦/透抽/蛤蠣/綜合蔬菜</Text>
                     </Box>
                     
-                    <Box marginTop={5} w={326}>
-                     <Text  bold fontSize={15}>白酒蛤蠣義大利麵                                          $290</Text>
+                    <Box marginTop={5} w={326} marginBottom={10}>
+                    <HStack>
+                     <Text  bold fontSize={15}>白酒蛤蠣義大利麵</Text>
+                     <Text bold fontSize={15} marginLeft={123}> $290</Text>
+                     </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/杏鮑菇/小小番茄/蛤蠣</Text>
                     </Box>
                     </Center>
@@ -163,8 +205,8 @@ import { ScrollView } from 'react-native-gesture-handler';
                borderWidth: colorMode=="light"? 0: 4,
                backgroundColor: colorMode == "light" ? "#FEFFEF" : "#574E45" 
             }}
-            firstTabStyle={{ marginLeft: 100 }}
-            lastTabStyle={{ marginRight: 100 }}
+            firstTabStyle={{ marginLeft: 50 }}
+            lastTabStyle={{ marginRight: 50 }}
             tabTextStyle={{ fontSize: 15, padding:5, color: colorMode == "light" ? "gray" : "#a5a5a5", fontWeight:"bold"}}
             activeTabStyle={{borderBottomWidth:2 ,borderBottomColor:colorMode=="light"?"#000":"#fff",
             backgroundColor:colorMode=="light"?"#FEFFEF":"#574E45"}}
