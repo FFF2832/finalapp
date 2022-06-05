@@ -32,6 +32,7 @@ const amount = 0;
 const CartContainer = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const { colorMode } = useColorMode();
   const totalPrice = useSelector(cartTotalPriceSelector);
 
   const AlertItem = () => {
@@ -52,12 +53,27 @@ const CartContainer = () => {
 
   const renderStoreItems = ({ item }) => {
     return (
-      <View style={styles.storeItem}>
+      
+      <View style={{
+        flexDirection: "row",
+    padding: 10,
+    marginBottom: 10,
+    marginTop:10,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    borderColor:" #FEFFEF",
+    
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: colorMode=="light"?"#574E45" : "#35322E",
+    
+    justifyContent: "center",
+      }} >
         <View style={styles.storeItemImg}>
           <Image style={styles.storeItemImage} source={{ uri: item.image }} />
         </View>
-        <View style={styles.storeItemInfo}>
-          <Text style={styles.storeItemTitle}>{item.name}</Text>
+        <View style={styles.storeItemInfo} >
+          <Text style={styles.storeItemTitle} >{item.name}</Text>
           <Text style={styles.storeItemPrice}>
             {item.gender}
           </Text>
@@ -93,7 +109,7 @@ const CartContainer = () => {
                 style={styles.cartItemRemoveButton}
               >
                 <Ionicons name="md-trash" size={15} color="black" />
-                <Text>移除</Text>
+                <Text style={{color: colorMode=="light"?"#574E45" : "#35322E",}}>移除</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -180,9 +196,7 @@ const DTypeScreen = ({ navigation: { goBack } }) => {
                     source={{ uri: colorMode=="light"?"https://github.com/FFF2832/finalapp/blob/master/src/images/Vector%201.png?raw=true":"https://raw.githubusercontent.com/zhiyu414/json/master/image/Vector%201%20(1).png" }}
                 alt="artist"
                 />
-        <CartContainer 
-        
-        />
+        <CartContainer  />
         <Box  style={{  backgroundColor: "#FEFFEF" ,weight:100}}>
 
         </Box>
@@ -208,6 +222,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     backgroundColor: "white",
+    
     justifyContent: "center",
   },
   storeItemImg: {

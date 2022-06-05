@@ -545,7 +545,7 @@ export default function index() {
       <Animated.View style={{
         width: getWidth() - 10,
         height: 3,
-        backgroundColor: '#0B0A09',
+        backgroundColor: colorMode=="light"?"#35322E" : "#ECD563",
         position: 'absolute',
         bottom:80,
         // Horizontal Padding = 20...
@@ -751,7 +751,12 @@ const DTypeStack = ({ navigation }) => {
         options={{
           title: "我的收藏",
           headerStyle: {
-            backgroundColor: colorMode == 'light' ? 'white' : '#4F5B57',
+            backgroundColor: colorMode == 'light' ? 'white' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
           },
           
          
