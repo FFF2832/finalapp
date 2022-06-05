@@ -398,6 +398,7 @@ import { lightTheme, darkTheme } from '../Theme';
 import ActionButton from '../components/ActionButton';
 
 import albumData from "../json/albums.json";
+import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -405,29 +406,23 @@ const Stack = createNativeStackNavigator();
 export default function index() {
   // Animated Tab Indicator...
   const tabOffsetValue = useRef(new Animated.Value(0)).current;
+  const { colorMode } = useColorMode();
+  const { colors } = useTheme();
   return (
     <NavigationContainer>
+      
       <Tab.Navigator tabBarOptions={{
         showLabel: false,
         // Floating Tab Bar...
-        style: {
-          backgroundColor: 'white',
-          position: 'absolute',
-          bottom: 40,
-          marginHorizontal: 20,
-          // Max Height...
-          height: 60,
-          borderRadius: 10,
-          // Shadow...
-          shadowColor: '#000',
-          shadowOpacity: 0.06,
-          shadowOffset: {
-            width: 10,
-            height: 10
-          },
-          paddingHorizontal: 20,
-        }
-      }}>
+        
+      }}
+            screenOptions={{
+        tabBarInactiveTintColor: colorMode == 'light' ? '#FEFFEF' : '#574E45',
+        tabBarActiveTintColor: colorMode == 'light' ? '#574E45' : '#ECD563',
+        tabBarStyle: { backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#9D8F72' },
+        // headerShown: false
+      }}
+      >
 
         {
           // Tab Screens....
@@ -436,7 +431,8 @@ export default function index() {
         }
         <Tab.Screen name="HomeStack" component={HomeStack} options={{
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          // focused
+          tabBarIcon: ({ color }) => (
             <View style={{
               // centring Tab Button...
               position: 'absolute',
@@ -444,10 +440,11 @@ export default function index() {
               
             }}>
               <FontAwesome5
-                name="home"
+                name="paw"
                 size={20}
-                color={focused ? 'red' : 'gray'}
+                color={color}
               ></FontAwesome5>
+              
             </View>
           )
         }} listeners={({ navigation, route }) => ({
@@ -460,17 +457,18 @@ export default function index() {
           }
         })}></Tab.Screen>
 
-        <Tab.Screen name={"Search"} component={DTypeScreen} options={{
-          tabBarIcon: ({ focused }) => (
+        <Tab.Screen name={"我的收藏"} component={DTypeStack} options={{
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
             <View style={{
               // centring Tab Button...
               position: 'absolute',
               top: 20
             }}>
               <FontAwesome5
-                name="search"
+                name="heart"
                 size={20}
-                color={focused ? 'red' : 'gray'}
+                color={color}
               ></FontAwesome5>
             </View>
           )
@@ -478,7 +476,7 @@ export default function index() {
           // Onpress Update....
           tabPress: e => {
             Animated.spring(tabOffsetValue, {
-              toValue: getWidth(),
+              toValue: getWidth()*1.3,
               useNativeDriver: true
             }).start();
           }
@@ -489,25 +487,28 @@ export default function index() {
 
         
 
-        <Tab.Screen name={"Notifications"} component={ MenuScreen} options={{
-          tabBarIcon: ({ focused }) => (
+        <Tab.Screen name={"菜單"} component={ MenuStack } options={{
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
             <View style={{
               // centring Tab Button...
               position: 'absolute',
               top: 20
             }}>
-              <FontAwesome5
+              {/* <FontAwesome5
                 name="bell"
                 size={20}
                 color={focused ? 'red' : 'gray'}
-              ></FontAwesome5>
+              ></FontAwesome5> */}
+              <MaterialIcons name="restaurant-menu"  size={25}
+                color={color}  />
             </View>
           )
         }} listeners={({ navigation, route }) => ({
           // Onpress Update....
           tabPress: e => {
             Animated.spring(tabOffsetValue, {
-              toValue: getWidth() * 3,
+              toValue: getWidth() * 2.65,
               useNativeDriver:true,
               
             }).start();
@@ -516,16 +517,16 @@ export default function index() {
 
         <Tab.Screen name={"Settings"} component={SettingsStack} options={
           {headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({ color }) => (
             <View style={{
               // centring Tab Button...
               position: 'absolute',
               top: 20
             }}>
               <FontAwesome5
-                name="user-alt"
+                name="info-circle"
                 size={20}
-                color={focused ? 'red' : 'gray'}
+                color={color}
               ></FontAwesome5>
             </View>
           )
@@ -544,7 +545,7 @@ export default function index() {
       <Animated.View style={{
         width: getWidth() - 10,
         height: 3,
-        backgroundColor: 'red',
+        backgroundColor: '#0B0A09',
         position: 'absolute',
         bottom:80,
         // Horizontal Padding = 20...
@@ -690,6 +691,95 @@ const SettingsStack = ({ navigation }) => {
     </Stack.Navigator>
   );
 }
+const MenuStack = ({ navigation }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator
+    // screenOptions={{
+    //   headerShown: false
+    // }}
+    >
+      <Stack.Screen
+        name="Menu"
+        component={MenuScreen}
+        options={{
+          title: "菜單",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          
+        }}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={DetailScreen}
+        options={{
+          title: "詳細",
+          headerStyle: {
+            backgroundColor: '#F9E6A1',
+          },
+          headerTintColor: colorMode == 'light' ? 'black' : 'white',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        }}
+      />
+      
+    </Stack.Navigator>
+  );
+}
+const DTypeStack = ({ navigation }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator
+    >
+      <Stack.Screen
+        name="DType"
+        component={DTypeScreen}
+        options={{
+          title: "我的收藏",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? 'white' : '#4F5B57',
+          },
+          
+         
+        }}
+      />
+      {/* <Stack.Screen
+        name="Content"
+        component={ContentScreen}
+        options={({ route }) => ({
+          title:"",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? 'white' : '#4F5B57',
+          },
+          headerTintColor: colorMode == 'light' ? 'black' : 'white',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? 'white' : '#4F5B57',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? 'black' : 'white',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        })}
+      /> */}
+     
+    </Stack.Navigator>
+  );
+}
 function getWidth() {
   let width = Dimensions.get("window").width
   // Horizontal Padding = 20...
@@ -741,7 +831,7 @@ function getWidth() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F9E6A1',
     alignItems: 'center',
     justifyContent: 'center',
   },

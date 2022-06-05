@@ -1,5 +1,3 @@
-
-
 import {
   StyleSheet,
   
@@ -69,7 +67,6 @@ const CartContainer = () => {
                 onPress={() => {
                   if (item.quantity === 1) {
                     dispatch(removeItem(item.id));
-
                     console.log("removed");
                     return;
                   } else {
@@ -186,7 +183,7 @@ const DTypeScreen = ({ navigation: { goBack } }) => {
         <CartContainer 
         
         />
-        <Box  style={{  backgroundColor: "#FEFFEF" ,height:1000,weight:100}}>
+        <Box  style={{  backgroundColor: "#FEFFEF" ,weight:100}}>
 
         </Box>
       </Box>

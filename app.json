@@ -8,7 +8,7 @@
     "splash": {
       "image": "https://github.com/zhiyu414/finalapp/blob/master/src/images/splash.png?raw=true",
       "resizeMode": "contain",
-      "backgroundColor": "#E2D5C3"
+      "backgroundColor": "#fff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

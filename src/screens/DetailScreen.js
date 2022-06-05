@@ -66,14 +66,14 @@ const DetailScreen = ({ route}) => {
            </HStack>
            
          </Box> 
-         <Box w={294} h={82} marginBottom={0} marginLeft={50}>
+         <Box w={294} h={100} marginBottom={0} marginLeft={50}>
          <HStack marginTop={19}  alignSelf= 'flex-start' >
             <Text w={126}>
                <Text bold fontSize={15} color="#A5A5A5" >是否親人  </Text>
                {people_close}
              </Text>
-             <Text marginLeft={45} fontSize={15} w={134}>
-               <Text bold fontSize={15} color="#A5A5A5">是否親貓  </Text>
+             <Text marginLeft={45} fontSize={15} w={150}>
+               <Text bold fontSize={15} color="#A5A5A5">是否親貓 </Text>
                {cat_close}
              </Text>
              
@@ -83,7 +83,7 @@ const DetailScreen = ({ route}) => {
                <Text bold  color="#A5A5A5" >是否已植入晶片  </Text>
                {microchip}
              </Text>
-             <Text marginLeft={10} fontSize={15} >
+             <Text marginLeft={6} fontSize={15} >
                <Text bold color="#A5A5A5">是否親狗  </Text>
                {dog_close}
              </Text>

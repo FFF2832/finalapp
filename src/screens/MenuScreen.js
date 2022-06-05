@@ -63,42 +63,42 @@ import { ScrollView } from 'react-native-gesture-handler';
                     <Box marginTop={5} w={326}>
                      <HStack>
                      <Text  bold fontSize={15}>白白的奶油白醬燉飯（五辛素)</Text>
-                     <Text bold fontSize={15} marginLeft={50}> $260</Text>
+                     <Text bold fontSize={15} marginLeft={42}> $260</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">鮮菇/杏鲍菇/蔥菇/粽合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>唐揚咖哩雞飯</Text>
-                     <Text bold fontSize={15} marginLeft={165}> $270</Text>
+                     <Text bold fontSize={15} marginLeft={170}> $270</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">吉揚雞塊!滑嫩蛋包/洋蔥碎/蒜碎/蔥菇片/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>泡菜(豬肉/牛肉)燉飯</Text>
-                     <Text bold fontSize={15} marginLeft={110}> $270</Text>
+                     <Text bold fontSize={15} marginLeft={108}> $270</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5" >洋恧碎/慹碎/韓式泡菜/辣醬/豬or牛肉片/起司片/綜{"\n"}合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>南洋牛肉飯</Text>
-                     <Text bold fontSize={15} marginLeft={180}> $280</Text>
+                     <Text bold fontSize={15} marginLeft={188}> $280</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/綜合蔬菜/蘑菇/檸檬/牛肉片</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>火辣豬豬</Text>
-                     <Text bold fontSize={15} marginLeft={195}> $270</Text>
+                     <Text bold fontSize={15} marginLeft={205}> $270</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/綜合蔬菜/蘑菇/牛番茄/豬絞肉</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>班班首選青醬雞腿排</Text>
-                     <Text bold fontSize={15} marginLeft={115}> $260</Text>
+                     <Text bold fontSize={15} marginLeft={120}> $260</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋洋葸碎/蒜碎/綜合蔬菜/杏鮑菇/炸雞腿排</Text>
                     </Box>
@@ -108,42 +108,42 @@ import { ScrollView } from 'react-native-gesture-handler';
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>南洋雞肉義大利麵</Text>
-                     <Text bold fontSize={15} marginLeft={130}> $270</Text>
+                     <Text bold fontSize={15} marginLeft={140}> $270</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/蘑菇/雞肉/檸檬/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>田園青醬義大利麵（五辛素）</Text>
-                     <Text bold fontSize={15} marginLeft={52}> $260</Text>
+                     <Text bold fontSize={15} marginLeft={53}> $260</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">蕃茄/核桃/綜合菇/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>紅牌蒂蒂海鮮義大利麵</Text>
-                     <Text bold fontSize={15} marginLeft={97}> $280</Text>
+                     <Text bold fontSize={15} marginLeft={105}> $280</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/杏鮑菇/鮮蝦/透抽/蛤蠾/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>班班首選青醬蝦義大利麵</Text>
-                     <Text bold fontSize={15} marginLeft={82}> $290</Text>
+                     <Text bold fontSize={15} marginLeft={88}> $290</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/鮮蝦/杏鮑菇/綜合蔬菜</Text>
                     </Box>
                     <Box marginTop={5} w={326}>
                     <HStack>
                      <Text  bold fontSize={15}>火辣豬豬義大利麵</Text>
-                     <Text bold fontSize={15} marginLeft={125}> $280</Text>
+                     <Text bold fontSize={15} marginLeft={140}> $280</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/蘑菇/牛番茄/豬絞肉</Text>
                     </Box>
                     <Box marginTop={5} w={326}> 
                     <HStack>
                      <Text  bold fontSize={15}>白醬海鮮義大利麵</Text>
-                     <Text bold fontSize={15} marginLeft={123}> $280</Text>
+                     <Text bold fontSize={15} marginLeft={140}> $280</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/杏鮑菇/鮮蝦/透抽/蛤蠣/綜合蔬菜</Text>
                     </Box>
@@ -151,7 +151,7 @@ import { ScrollView } from 'react-native-gesture-handler';
                     <Box marginTop={5} w={326} marginBottom={10}>
                     <HStack>
                      <Text  bold fontSize={15}>白酒蛤蠣義大利麵</Text>
-                     <Text bold fontSize={15} marginLeft={123}> $290</Text>
+                     <Text bold fontSize={15} marginLeft={140}> $290</Text>
                      </HStack>
                      <Text bold fontSize={12} color="#a5a5a5">洋蔥碎/蒜碎/杏鮑菇/小小番茄/蛤蠣</Text>
                     </Box>
