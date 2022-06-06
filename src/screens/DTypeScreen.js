@@ -1,3 +1,4 @@
+
 import {
   StyleSheet,
   
@@ -18,6 +19,7 @@ import {
   removeItem,
 } from "../redux/features/cartSlice";
 import { cartTotalPriceSelector } from "../redux/selectors";
+
 import { useNavigation, NavigationContainer } from "@react-navigation/native";
 import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HStack ,VStack,useColorMode} from "native-base";
 //import Header from component folder- this takes props
@@ -30,9 +32,9 @@ const amount = 0;
 // import CartContainer from "../components/CartContainer";
 
 const CartContainer = () => {
+  const { colorMode } = useColorMode();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-  const { colorMode } = useColorMode();
   const totalPrice = useSelector(cartTotalPriceSelector);
 
   const AlertItem = () => {
@@ -53,7 +55,6 @@ const CartContainer = () => {
 
   const renderStoreItems = ({ item }) => {
     return (
-      
       <View style={{
         flexDirection: "row",
     padding: 10,
@@ -61,19 +62,16 @@ const CartContainer = () => {
     marginTop:10,
     marginVertical: 5,
     marginHorizontal: 10,
-    borderColor:" #FEFFEF",
-    
-    borderWidth: 1,
+    borderWidth: 0,
     borderRadius: 5,
-    backgroundColor: colorMode=="light"?"#574E45" : "#35322E",
-    
+    backgroundColor: colorMode=="light"?"white":"#35322E",
     justifyContent: "center",
-      }} >
+      }}>
         <View style={styles.storeItemImg}>
           <Image style={styles.storeItemImage} source={{ uri: item.image }} />
         </View>
-        <View style={styles.storeItemInfo} >
-          <Text style={styles.storeItemTitle} >{item.name}</Text>
+        <View style={styles.storeItemInfo}>
+          <Text style={styles.storeItemTitle}>{item.name}</Text>
           <Text style={styles.storeItemPrice}>
             {item.gender}
           </Text>
@@ -101,15 +99,28 @@ const CartContainer = () => {
                 <Ionicons name="md-add" size={24} color="black" />
               </TouchableOpacity> */}
             </View>
-            <View style={styles.cartItemRemove}>
+            <View style={{
+               alignItems: "center",
+               justifyContent: "center",
+               width:227,
+               backgroundColor:colorMode=="light"?"#F9E6A1":"#BCB9A7",
+               height:30,
+               borderRadius:6
+            }}>
               <TouchableOpacity
                 onPress={() => {
                   dispatch(removeItem(item.id));
                 }}
-                style={styles.cartItemRemoveButton}
+                style={{
+                  marginHorizontal: 20,
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                
+                }}
               >
                 <Ionicons name="md-trash" size={15} color="black" />
-                <Text style={{color: colorMode=="light"?"#574E45" : "#35322E",}}>移除</Text>
+                <Text style={{color:'#000'}}>移除</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -196,7 +207,9 @@ const DTypeScreen = ({ navigation: { goBack } }) => {
                     source={{ uri: colorMode=="light"?"https://github.com/FFF2832/finalapp/blob/master/src/images/Vector%201.png?raw=true":"https://raw.githubusercontent.com/zhiyu414/json/master/image/Vector%201%20(1).png" }}
                 alt="artist"
                 />
-        <CartContainer  />
+        <CartContainer 
+        
+        />
         <Box  style={{  backgroundColor: "#FEFFEF" ,weight:100}}>
 
         </Box>
@@ -222,7 +235,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     backgroundColor: "white",
-    
     justifyContent: "center",
   },
   storeItemImg: {
@@ -299,4 +311,7 @@ const styles = StyleSheet.create({
   cartFooter: {
     justifyContent: "space-between",
   },
+  checkoutText:{
+    marginLeft:10
+  }
 });

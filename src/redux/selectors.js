@@ -11,4 +11,8 @@ export const cartTotalPriceSelector = createSelector([cartSelector], (cart) =>
     (total, current) => (total += current.price * current.quantity),
     0
   )
+
+);
+export const updateSelector = createSelector([cartSelector], (cart) =>
+  cart.reduce((like, current) => (like = current.state), 0)
 );

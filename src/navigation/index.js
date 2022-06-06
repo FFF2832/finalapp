@@ -639,7 +639,7 @@ const SettingsStack = ({ navigation }) => {
         name="資訊"
         component={SettingsScreen}
         options={{
-          title: "Settings",
+          title: "資訊",
           headerStyle: {
             backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
           },
@@ -751,7 +751,7 @@ const DTypeStack = ({ navigation }) => {
         options={{
           title: "我的收藏",
           headerStyle: {
-            backgroundColor: colorMode == 'light' ? 'white' : '#BCB9A7',
+            backgroundColor: colorMode == 'light' ? '#F9E6A1' : '#BCB9A7',
           },
           headerTitleStyle: {
             color: colorMode == 'light' ? 'black' : 'white',

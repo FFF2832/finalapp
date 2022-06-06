@@ -129,18 +129,28 @@
 import React , { useState,useEffect }from "react";
 import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable,Center ,ScrollView } from "native-base"
 import { TouchableOpacity,Animated,View} from "react-native"
-
+import {updateSelector } from "../redux/selectors";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart,removeItem } from "../redux/features/cartSlice";
+import { addToCart,removeItem,updateItem } from "../redux/features/cartSlice";
 const AlbumDetail = ({ album, navigation }) => {
     const dispatch = useDispatch();
- 
-  
+    //const cart = useSelector((state) => state.cart);
+    const like = useSelector(updateSelector);
   const AnimatedIcon=Animated.createAnimatedComponent(MaterialCommunityIcons);
   const [liked,setliked]=useState(false);
   const [visible,setVisible]=useState(false);
   const currentValue =new Animated.Value(1);
+  // const allAnime = useSelector((state) => state.allAnime)
+  // const anime = useMemo(() => {
+  //   for (let i = 0; i < allAnime.length; i += 1) {
+  //     if (allAnime[i].id === animeIndex.id) {
+  //       return allAnime[i]
+  //     }
+  //   }
+  //   return animeIndex
+  // }, allAnime)
+  
   useEffect(()=>{
     if(liked==true){
       Animated.spring(currentValue,{
@@ -231,18 +241,21 @@ const AlbumDetail = ({ album, navigation }) => {
                       
                      }}
                     onPress={() => {
+                      // dispatch(updateItem(album));
                       setliked(!liked);
                       if(liked==false){
                         setVisible(true);
-                      
+
+                       
                       }
                      
                       liked?dispatch(removeItem(album)):dispatch(addToCart(album));
-                      
+                     
                      
                     }}
                     />
                   </Box>
+                  <Text>{like}</Text>
                 </Box>
             {/* </TouchableOpacity> */}
                 

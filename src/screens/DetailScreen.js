@@ -1,9 +1,14 @@
-import React from 'react';
-import { Linking } from 'react-native';
+import React , { useState,useEffect }from 'react';
+import { Linking,TouchableOpacity } from 'react-native';
 import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HStack ,VStack} from "native-base";
-
-
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart,removeItem } from "../redux/features/cartSlice";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const DetailScreen = ({ route}) => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+  const [liked,setliked]=useState(false);
+  const [visible,setVisible]=useState(false);
   const { name,
         birthday,
         gender,
@@ -23,6 +28,8 @@ const DetailScreen = ({ route}) => {
       } = route.params;
   return (
      <>
+      
+        
       <Image
             source={{uri: image }}
             alt='dogImage'
@@ -32,6 +39,38 @@ const DetailScreen = ({ route}) => {
             top={0}
             
           />
+         <TouchableOpacity
+             onPress={() => {
+              dispatch(addToCart((route.params)));
+            }}
+            >
+        <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1"  top={30} right={-130}
+        
+        >
+
+                  <Box position="absolute" top={2} right={2}>
+                  <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
+                    color="#574E45"
+                     size={35} 
+                     
+                     style={{
+                      
+                     }}
+                     onPress={() => {
+                      setliked(!liked);
+                      if(liked==false){
+                    
+                      
+                      }
+                     
+                      dispatch(addToCart((route.params)));
+                      
+                     
+                    }}
+                    />
+                  </Box>
+        </Box>
+         </TouchableOpacity>
       <ScrollView >
         <Center>
        <Box
@@ -44,7 +83,8 @@ const DetailScreen = ({ route}) => {
           _light={{ bg: "#FEFFEF" }}
           borderRadius={20}
        >
-         
+           
+          
           <Box 
           w={352}
           h={116}
@@ -102,7 +142,7 @@ const DetailScreen = ({ route}) => {
            <ScrollView>
            <HStack alignSelf= 'flex-start' marginTop={13} marginLeft={5} >
              <Box w={2} h={5} bgColor="#ECD563" marginRight={2} marginTop={1}/>
-             <Text w={270} fontSize={15}  lineHeight={30}>
+             <Text w={305} fontSize={15}  lineHeight={30}>
                <Text  >救援經過:  </Text>
                {process}
              </Text>
