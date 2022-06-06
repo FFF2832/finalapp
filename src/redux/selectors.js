@@ -14,5 +14,5 @@ export const cartTotalPriceSelector = createSelector([cartSelector], (cart) =>
 
 );
 export const updateSelector = createSelector([cartSelector], (cart) =>
-  cart.reduce((like, current) => (like = current.state), 0)
+  cart.reduce((likestate, current) => (likestate = current.state), 0)
 );

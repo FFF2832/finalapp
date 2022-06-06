@@ -4,10 +4,13 @@ import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HSt
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart,removeItem } from "../redux/features/cartSlice";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {updateSelector } from "../redux/selectors";
 const DetailScreen = ({ route}) => {
   const dispatch = useDispatch();
+  const likestate = useSelector(updateSelector);
   const cart = useSelector((state) => state.cart);
   const [liked,setliked]=useState(false);
+  ;
   const [visible,setVisible]=useState(false);
   const { name,
         birthday,
@@ -41,7 +44,11 @@ const DetailScreen = ({ route}) => {
           />
          <TouchableOpacity
              onPress={() => {
-              dispatch(addToCart((route.params)));
+              // dispatch(addToCart((route.params)));
+              // if({likestate}==0){
+              //   setliked(!liked);
+                
+              // }
             }}
             >
         <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1"  top={30} right={-130}
@@ -49,6 +56,7 @@ const DetailScreen = ({ route}) => {
         >
 
                   <Box position="absolute" top={2} right={2}>
+
                   <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
                     color="#574E45"
                      size={35} 
@@ -58,17 +66,19 @@ const DetailScreen = ({ route}) => {
                      }}
                      onPress={() => {
                       setliked(!liked);
-                      if(liked==false){
-                    
-                      
+                      dispatch(addToCart((route.params)));
+                      if({likestate}==0){
+                        setliked(!liked);
+                        
                       }
                      
-                      dispatch(addToCart((route.params)));
+                      //dispatch(addToCart((route.params)));
                       
                      
                     }}
                     />
                   </Box>
+                  <Text>{setliked}</Text>
         </Box>
          </TouchableOpacity>
       <ScrollView >

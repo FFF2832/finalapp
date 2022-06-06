@@ -136,11 +136,12 @@ import { addToCart,removeItem,updateItem } from "../redux/features/cartSlice";
 const AlbumDetail = ({ album, navigation }) => {
     const dispatch = useDispatch();
     //const cart = useSelector((state) => state.cart);
-    const like = useSelector(updateSelector);
+    const likestate = useSelector(updateSelector);
   const AnimatedIcon=Animated.createAnimatedComponent(MaterialCommunityIcons);
   const [liked,setliked]=useState(false);
   const [visible,setVisible]=useState(false);
   const currentValue =new Animated.Value(1);
+
   // const allAnime = useSelector((state) => state.allAnime)
   // const anime = useMemo(() => {
   //   for (let i = 0; i < allAnime.length; i += 1) {
@@ -231,31 +232,33 @@ const AlbumDetail = ({ album, navigation }) => {
             }}
             > */}
               
-              <Box w={10} h={10} borderRadius={20} bgColor="#F9E6A1" position="absolute" top={30} right={-130}>
+              <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1" position="absolute" top={30} right={-130}>
                   <Box position="absolute" top={2} right={2}>
                   <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
                     color="#574E45"
-                     size={25} 
+                     size={35} 
                      
                      style={{
                       
                      }}
                     onPress={() => {
-                      // dispatch(updateItem(album));
-                      setliked(!liked);
+                      // dispatch(updateItem());
+                    setliked(!liked);
+                     
                       if(liked==false){
                         setVisible(true);
 
                        
                       }
                      
-                      liked?dispatch(removeItem(album)):dispatch(addToCart(album));
-                     
+                      likestate?dispatch(removeItem(album.id)):dispatch(addToCart(album));
+                      
                      
                     }}
                     />
+
                   </Box>
-                  <Text>{like}</Text>
+                  <Text>{likestate}</Text>
                 </Box>
             {/* </TouchableOpacity> */}
                 
