@@ -54,6 +54,7 @@ const CatDetailScreen = ({ route}) => {
           // position="absolute"
           marginTop={27}
           alignSelf= 'center'
+          marginBottom={19}
          >
            <Text bold fontSize={20} marginLeft={27} marginTop={15}>{name}</Text>
            <HStack  marginTop={2} alignSelf= 'flex-start' marginLeft={5}>
@@ -66,29 +67,29 @@ const CatDetailScreen = ({ route}) => {
            </HStack>
            
          </Box> 
-         <Box w={294} h={95} marginBottom={0} marginLeft={50}>
+         <Center w={294} h={95} marginTop={19} marginLeft={0} alignSelf="center">
          <HStack marginTop={19}  alignSelf= 'flex-start' >
-            <Text w={126}>
+            <Text w={180}>
                <Text bold fontSize={15} color="#A5A5A5" >是否親人  </Text>
                {people_close}
              </Text>
-             <Text marginLeft={45} fontSize={15} w={134}>
+             <Text marginLeft={0} fontSize={15} w={134}>
                <Text bold fontSize={15} color="#A5A5A5">是否親貓  </Text>
                {cat_close}
              </Text>
              
          </HStack>
          <HStack alignSelf= 'flex-start' marginTop={4} marginRight={0}  w={40} h={20}>
-            <Text fontSize={15} >
+            <Text fontSize={15} w={180}>
                <Text bold  color="#A5A5A5" >是否已植入晶片  </Text>
                {microchip}
              </Text>
-             <Text marginLeft={6} fontSize={15} >
+             <Text marginLeft={0} fontSize={15} w={134}>
                <Text bold color="#A5A5A5">是否親狗  </Text>
                {dog_close}
              </Text>
          </HStack>
-         </Box>
+         </Center>
          <Box 
           w={352}
           h={200}

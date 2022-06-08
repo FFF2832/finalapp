@@ -4,10 +4,10 @@ import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HSt
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart,removeItem } from "../redux/features/cartSlice";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-// import {updateSelector } from "../redux/selectors";
+import {updateSelector } from "../redux/selectors";
 const DetailScreen = ({ route}) => {
   const dispatch = useDispatch();
-  //const likestate = useSelector(updateSelector);
+  const likestate = useSelector(updateSelector);
   const cart = useSelector((state) => state.cart);
   const [liked,setliked]=useState(false);
   ;
@@ -51,13 +51,13 @@ const DetailScreen = ({ route}) => {
               // }
             }}
             >
-        <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1"  top={30} right={-130}
+        {/* <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1"  top={30} right={-130}
         
         >
 
                   <Box position="absolute" top={2} right={2}>
 
-                  {/* <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
+                  <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
                     color="#574E45"
                      size={35} 
                      
@@ -67,19 +67,19 @@ const DetailScreen = ({ route}) => {
                      onPress={() => {
                       setliked(!liked);
                       dispatch(addToCart((route.params)));
-                      if({likestate}==1){
+                      if({likestate}==0){
                         setliked(!liked);
-                        <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1"  top={30} right={-130}></Box>
+                        
                       }
                      
                       //dispatch(addToCart((route.params)));
                       
                      
                     }}
-                    /> */}
+                    />
                   </Box>
-                  {/* <Text>{setliked}</Text> */}
-        </Box>
+                  <Text>{setliked}</Text>
+        </Box> */}
          </TouchableOpacity>
       <ScrollView >
         <Center>
@@ -104,6 +104,7 @@ const DetailScreen = ({ route}) => {
           // position="absolute"
           marginTop={27}
           alignSelf= 'center'
+          marginBottom={19}
          >
            <Text bold fontSize={20} marginLeft={27} marginTop={15}>{name}</Text>
            <HStack  marginTop={2} alignSelf= 'flex-start' marginLeft={5}>
@@ -116,29 +117,29 @@ const DetailScreen = ({ route}) => {
            </HStack>
            
          </Box> 
-         <Box w={294} h={100} marginBottom={0} marginLeft={50}>
+         <Center w={294} h={70} marginTop={19} marginLeft={0} alignSelf="center">
          <HStack marginTop={19}  alignSelf= 'flex-start' >
-            <Text w={126}>
+            <Text w={180}>
                <Text bold fontSize={15} color="#A5A5A5" >是否親人  </Text>
                {people_close}
              </Text>
-             <Text marginLeft={45} fontSize={15} w={150}>
-               <Text bold fontSize={15} color="#A5A5A5">是否親貓 </Text>
+             <Text marginLeft={0} fontSize={15} w={134}>
+               <Text bold fontSize={15} color="#A5A5A5">是否親貓  </Text>
                {cat_close}
              </Text>
              
          </HStack>
          <HStack alignSelf= 'flex-start' marginTop={4} marginRight={0}  w={40} h={20}>
-            <Text fontSize={15} >
+            <Text fontSize={15} w={180}>
                <Text bold  color="#A5A5A5" >是否已植入晶片  </Text>
                {microchip}
              </Text>
-             <Text marginLeft={6} fontSize={15} >
+             <Text marginLeft={0} fontSize={15} w={134}>
                <Text bold color="#A5A5A5">是否親狗  </Text>
                {dog_close}
              </Text>
          </HStack>
-         </Box>
+         </Center>
          <Box 
           w={352}
           h={170}
@@ -246,3 +247,4 @@ const DetailScreen = ({ route}) => {
 }
 
 export default DetailScreen;
+
