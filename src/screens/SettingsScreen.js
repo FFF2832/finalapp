@@ -30,7 +30,7 @@ const SettingsScreen = ({ navigation }) => {
                     paddingRight={4}
                     position= "absolute"
                     marginTop={0}
-                    
+                   
                     source={{ uri: colorMode=="light"?"https://github.com/FFF2832/finalapp/blob/master/src/images/Vector%201.png?raw=true":"https://raw.githubusercontent.com/zhiyu414/json/master/image/Vector%201%20(1).png" }}
                 alt="artist"
                 />
@@ -54,21 +54,36 @@ const SettingsScreen = ({ navigation }) => {
         
         </Center>
         <HStack  marginLeft={53} marginTop={5}>
-            <Pressable onPress={() => Linking.openURL("https://www.facebook.com/langlangdontcry")}>
-                <Image
-                    margin="1"
-                    width="57"
-                    height="57"
-                    style={{elevation:2}}
-                    borderRadius="7"
-                    marginRight={58}
-                    marginTop={0}
-                   
-                    
-                source={{ uri: "https://github.com/zhiyu414/json/blob/master/image/%E6%8F%92%E5%9C%96.png?raw=true" }}
-                alt="artist"
-                />
-            </Pressable>
+            <Box style={{ shadowColor: '#000000',
+            shadowOpacity: 0.4,
+            shadowRadius: 1,
+            shadowOffset: {
+            height: 1,
+            width: 0,
+            } }}>
+                <Pressable onPress={() => Linking.openURL("https://www.facebook.com/langlangdontcry")}>
+                    <Image
+                        margin="1"
+                        width="57"
+                        height="57"
+                        style={{elevation:2}}
+                        borderRadius="7"
+                        marginRight={58}
+                        marginTop={0}
+                       
+                        
+                    source={{ uri: "https://github.com/zhiyu414/json/blob/master/image/%E6%8F%92%E5%9C%96.png?raw=true" }}
+                    alt="artist"
+                    />
+                </Pressable>
+            </Box>
+            <Box style={{ shadowColor: '#000000',
+            shadowOpacity: 0.4,
+            shadowRadius: 1,
+            shadowOffset: {
+            height: 1,
+            width: 0,
+            } }}>
             <Pressable onPress={() => Linking.openURL("https://www.instagram.com/langlangdontcry/")}>
                 <Image
                     margin="1"
@@ -84,6 +99,14 @@ const SettingsScreen = ({ navigation }) => {
                 alt="artist"
                 />
                 </Pressable>
+            </Box>
+            <Box style={{ shadowColor: '#000000',
+            shadowOpacity: 0.4,
+            shadowRadius: 1,
+            shadowOffset: {
+            height: 1,
+            width: 0,
+            } }}>
             <Pressable onPress={() => Linking.openURL("https://www.youtube.com/channel/UCcPPwWthX9TSx6HZ0h8mVKg")}>
                 <Image
                     margin="1"
@@ -99,6 +122,7 @@ const SettingsScreen = ({ navigation }) => {
                 alt="artist"
                 />
             </Pressable>
+            </Box>
         </HStack>
 
         <Box 
@@ -107,7 +131,16 @@ const SettingsScreen = ({ navigation }) => {
         >
             <Pressable onPress={() => Linking.openURL("https://shop.langlangdontcry.com.tw/")}>
             <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
-        _light={{ bg: "white" }}borderRadius={4} alignSelf="center" style={{elevation:2}}>
+        _light={{ bg: "white" }}borderRadius={4} alignSelf="center" style={{elevation:2,
+            shadowColor: '#000000',
+            shadowOpacity: 0.4,
+            shadowRadius: 1,
+            shadowOffset: {
+            height: 1,
+            width: 0,
+            } 
+        
+        }}>
                 <HStack justifyContent="flex-start" marginTop={0}>
                 <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
                 _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
@@ -121,7 +154,8 @@ const SettingsScreen = ({ navigation }) => {
             </Pressable>
             <Pressable onPress={() => Linking.openURL("http://www.langlangdontcry.com.tw/story.php")}>
             <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
-        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2}} marginTop={30}>
+        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2,shadowColor: '#000000',
+        shadowOpacity: 0.4, shadowRadius: 1, shadowOffset: { height: 1, width: 0,} }} marginTop={30}>
                 <HStack justifyContent="flex-start" marginTop={0}>
                 <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
                 _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 
@@ -135,7 +169,8 @@ const SettingsScreen = ({ navigation }) => {
             </Pressable>
             <Pressable onPress={() => Linking.openURL("https://www.youtube.com/channel/UCcPPwWthX9TSx6HZ0h8mVKg")}>
             <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
-        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2}} marginTop={30}>
+        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2,shadowColor: '#000000',
+        shadowOpacity: 0.4, shadowRadius: 1, shadowOffset: { height: 1, width: 0,}}} marginTop={30}>
                 <HStack justifyContent="flex-start" marginTop={0}>
                 <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
                 _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 

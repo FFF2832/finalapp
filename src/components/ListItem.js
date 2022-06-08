@@ -34,7 +34,8 @@ const ListItem = ({ title, navigation, destination }) => {
       </HStack> */}
 
       <Box w={341} h={67}  _dark={{ bg: "#35322E" }}
-        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2}} marginTop={30}>
+        _light={{ bg: "white" }} borderRadius={4} alignSelf="center" style={{elevation:2,shadowColor: '#000000',
+        shadowOpacity: 0.4, shadowRadius: 1, shadowOffset: { height: 1, width: 0,}}} marginTop={30}>
         <HStack justifyContent="flex-start" marginTop={0}>
           <Center width="54" height="54"   position= "absolute"   borderRadius="9" marginTop={2} marginLeft={2} 
                 _dark={{bg: "#BCB9A7" ,borderwidth:1,borderColor:"#fff"}} _light={{bg:"#F1E9C3"}}> 

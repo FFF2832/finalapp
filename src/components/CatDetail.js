@@ -1,30 +1,47 @@
 import React , { useState,useEffect }from "react";
 import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable,Center ,ScrollView } from "native-base"
 import { TouchableOpacity,Animated,View} from "react-native"
-
+import {updateSelector } from "../redux/selectors";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart,removeItem } from "../redux/features/cartSlice";
+import { addToCart,removeItem,updateItem , increment} from "../redux/features/cartSlice";
 const CatDetail = ({ album, navigation }) => {
     const dispatch = useDispatch();
- 
-  
+    //const cart = useSelector((state) => state.cart);
+    const likestate = useSelector(updateSelector);
   const AnimatedIcon=Animated.createAnimatedComponent(MaterialCommunityIcons);
   const [liked,setliked]=useState(false);
   const [visible,setVisible]=useState(false);
   const currentValue =new Animated.Value(1);
+
+  // const allAnime = useSelector((state) => state.allAnime)
+  // const anime = useMemo(() => {
+  //   for (let i = 0; i < allAnime.length; i += 1) {
+  //     if (allAnime[i].id === animeIndex.id) {
+  //       return allAnime[i]
+  //     }
+  //   }
+  //   return animeIndex
+  // }, allAnime)
+  
   useEffect(()=>{
     if(liked==true){
+      dispatch(addToCart(album));
       Animated.spring(currentValue,{
         toValue:2,
-        friction:2
+        friction:2,
+        useNativeDriver: true
       }).start(()=>{
         Animated.spring(currentValue,{
-          toValue:1
+          toValue:1,
+          useNativeDriver: true
         }).start(()=>{
           setVisible(false)
         })
       })
+    }
+    else{
+      dispatch(removeItem(album.id));
     }
     
   },[liked])
@@ -45,7 +62,7 @@ const CatDetail = ({ album, navigation }) => {
         _light={{ bg: "white" }}>
           
         <Pressable 
-          onPress={() => navigation.navigate('CatDetail', album)}
+          onPress={() => navigation.navigate('Detail', album)}
         >
           
           <HStack  >
@@ -91,28 +108,31 @@ const CatDetail = ({ album, navigation }) => {
             }}
             > */}
               
-              <Box w={10} h={10} borderRadius={20} bgColor="#F9E6A1" position="absolute" top={30} right={-130}>
+              <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1" position="absolute" top={30} right={-130}>
                   <Box position="absolute" top={2} right={2}>
                   <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
                     color="#574E45"
-                     size={25} 
+                     size={35} 
                      
                      style={{
                       
                      }}
                     onPress={() => {
-                      setliked(!liked);
+                      //dispatch(updateItem());
+                    setliked(!liked);
+                     
                       if(liked==false){
                         setVisible(true);
-                      
+
+                       
                       }
                      
-                      liked?dispatch(removeItem(album)):dispatch(addToCart(album));
-                      
-                     
+                      //likestate?dispatch(removeItem(album.id)):dispatch(addToCart(album));
                     }}
                     />
+
                   </Box>
+                  {/* <Text>{likestate}</Text> */}
                 </Box>
             {/* </TouchableOpacity> */}
                 

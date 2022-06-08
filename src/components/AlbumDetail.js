@@ -132,7 +132,7 @@ import { TouchableOpacity,Animated,View} from "react-native"
 import {updateSelector } from "../redux/selectors";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart,removeItem,updateItem } from "../redux/features/cartSlice";
+import { addToCart,removeItem,updateItem , increment} from "../redux/features/cartSlice";
 const AlbumDetail = ({ album, navigation }) => {
     const dispatch = useDispatch();
     //const cart = useSelector((state) => state.cart);
@@ -154,6 +154,7 @@ const AlbumDetail = ({ album, navigation }) => {
   
   useEffect(()=>{
     if(liked==true){
+      dispatch(addToCart(album));
       Animated.spring(currentValue,{
         toValue:2,
         friction:2,
@@ -166,6 +167,11 @@ const AlbumDetail = ({ album, navigation }) => {
           setVisible(false)
         })
       })
+      
+    }
+    else{
+      dispatch(removeItem(album.id));
+      //setliked({likestate});
     }
     
   },[liked])
@@ -178,12 +184,15 @@ const AlbumDetail = ({ album, navigation }) => {
 > 
 <ScrollView>
     <Box
-      marginLeft={29} marginRight={29} marginTop={5} borderRadius={4} shadow={2} 
+      marginLeft={29} marginRight={29} marginTop={5} borderRadius={4} 
        
     >
       
       <HStack  p={1} _dark={{ bg: "#35322E" }}
-        _light={{ bg: "white" }}>
+        _light={{ bg: "white" }}
+        style={{shadowColor: '#000000',
+       shadowOpacity: 0.4, shadowRadius: 1, shadowOffset: { height: 1, width: 0,}}}
+        >
           
         <Pressable 
           onPress={() => navigation.navigate('Detail', album)}
@@ -242,7 +251,7 @@ const AlbumDetail = ({ album, navigation }) => {
                       
                      }}
                     onPress={() => {
-                      // dispatch(updateItem());
+                      //dispatch(updateItem());
                     setliked(!liked);
                      
                       if(liked==false){
@@ -250,15 +259,13 @@ const AlbumDetail = ({ album, navigation }) => {
 
                        
                       }
-                     
-                      likestate?dispatch(removeItem(album.id)):dispatch(addToCart(album));
-                      
+                      //likestate?dispatch(removeItem(album)):dispatch(addToCart(album));
                      
                     }}
                     />
 
                   </Box>
-                  <Text>{likestate}</Text>
+                  {/* <Text>{likestate}</Text> */}
                 </Box>
             {/* </TouchableOpacity> */}
                 

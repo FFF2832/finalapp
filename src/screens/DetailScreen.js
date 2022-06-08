@@ -4,10 +4,10 @@ import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HSt
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart,removeItem } from "../redux/features/cartSlice";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {updateSelector } from "../redux/selectors";
+// import {updateSelector } from "../redux/selectors";
 const DetailScreen = ({ route}) => {
   const dispatch = useDispatch();
-  const likestate = useSelector(updateSelector);
+  //const likestate = useSelector(updateSelector);
   const cart = useSelector((state) => state.cart);
   const [liked,setliked]=useState(false);
   ;
@@ -57,7 +57,7 @@ const DetailScreen = ({ route}) => {
 
                   <Box position="absolute" top={2} right={2}>
 
-                  <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
+                  {/* <MaterialCommunityIcons name={liked?"heart":"heart-outline"} 
                     color="#574E45"
                      size={35} 
                      
@@ -67,18 +67,18 @@ const DetailScreen = ({ route}) => {
                      onPress={() => {
                       setliked(!liked);
                       dispatch(addToCart((route.params)));
-                      if({likestate}==0){
+                      if({likestate}==1){
                         setliked(!liked);
-                        
+                        <Box w={50} h={50} borderRadius={60} bgColor="#F9E6A1"  top={30} right={-130}></Box>
                       }
                      
                       //dispatch(addToCart((route.params)));
                       
                      
                     }}
-                    />
+                    /> */}
                   </Box>
-                  <Text>{setliked}</Text>
+                  {/* <Text>{setliked}</Text> */}
         </Box>
          </TouchableOpacity>
       <ScrollView >
