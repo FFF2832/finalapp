@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "14Persnote app",
-    "slug": "14persnote-app",
+    "name": "17浪浪收藏館",
+    "slug": "17-浪浪收藏館",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "https://github.com/zhiyu414/finalapp/blob/master/assets/icon.png?raw=true",
     "splash": {
       "image": "https://github.com/zhiyu414/finalapp/blob/master/src/images/splash.png?raw=true",
       "resizeMode": "contain",
@@ -21,14 +21,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "https://github.com/zhiyu414/finalapp/blob/master/assets/adaptive-icon.png?raw=true",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Persnote app",
-    "githubUrl": "https://github.com/FFF2832/wkmidterm"
+    "description": "17_stray app ",
+    "githubUrl": "https://github.com/FFF2832/finalapp"
   }
 }

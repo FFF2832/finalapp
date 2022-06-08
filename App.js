@@ -6,9 +6,9 @@ import { View,Text,Button,Image,StyleSheet} from 'react-native';
 import { NativeBaseProvider,AspectRatio } from 'native-base';
 import { Provider } from "react-redux";
 import store from "./src/redux/store";
-
+import SplashScreen from './src/screens/SplashScreen';
 import Navigation from './src/navigation';
-
+import AnimatedSplash from "react-native-animated-splash-screen";
 import AppIntroSlider from 'react-native-app-intro-slider';
 const App = () => {
   const [showRealApp,setshowRealApp]=useState(false)
@@ -42,7 +42,16 @@ const App = () => {
       showRealApp?(
         <Provider store={store}>
               <NativeBaseProvider>
-          
+              {/* <AnimatedSplash
+              translucent={true}
+              isLoaded={this.state.isLoaded}
+              logoImage={require("./assets/logo.png")}
+              backgroundColor={"#262626"}
+              logoHeight={150}
+              logoWidth={150}
+            >
+            
+             </AnimatedSplash> */}
                 {/* <Intro/> */}
                   <Navigation />
               </NativeBaseProvider>
@@ -62,6 +71,7 @@ const App = () => {
 
         // </SafeAreaProvider>
       ):(
+       
         < AppIntroSlider
         data={slides}
         renderItem ={renderItem }

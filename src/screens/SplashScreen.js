@@ -24,4 +24,5 @@ const SplashScreen = (props) => {
     isAppInitialized: appInitSelectors.isAppInitialized(state),
   })
   
-  export default connect(mapStateToProps)(SplashScreen)
+  //export default connect(mapStateToProps)(SplashScreen)  
+  export default SplashScreen

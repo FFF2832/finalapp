@@ -97,7 +97,7 @@ const DetailScreen = ({ route}) => {
           
           <Box 
           w={352}
-          h={116}
+          h={125}
           _dark={{ bg: "#35322E" }}
           _light={{ bg: "#fff" }}
           borderRadius={20}
@@ -117,13 +117,13 @@ const DetailScreen = ({ route}) => {
            </HStack>
            
          </Box> 
-         <Center w={294} h={70} marginTop={19} marginLeft={0} alignSelf="center">
+         <Center w={315} h={73} marginTop={19} marginLeft={0} alignSelf="center">
          <HStack marginTop={19}  alignSelf= 'flex-start' >
             <Text w={180}>
                <Text bold fontSize={15} color="#A5A5A5" >是否親人  </Text>
                {people_close}
              </Text>
-             <Text marginLeft={0} fontSize={15} w={134}>
+             <Text marginLeft={0} fontSize={15} w={150}>
                <Text bold fontSize={15} color="#A5A5A5">是否親貓  </Text>
                {cat_close}
              </Text>
@@ -142,7 +142,7 @@ const DetailScreen = ({ route}) => {
          </Center>
          <Box 
           w={352}
-          h={170}
+          h={175}
           _dark={{ bg: "#35322E" }}
           _light={{ bg: "#fff" }}
           borderRadius={20}
@@ -162,7 +162,7 @@ const DetailScreen = ({ route}) => {
            </ScrollView>
          
          </Box> 
-         <VStack alignSelf= 'center'   w={310} h={98} marginTop={19} marginBottom={0}>
+         <VStack alignSelf= 'center'   w={310} h={120} marginTop={19} marginBottom={0}>
          <HStack >
              <Box w={2} h={5} bgColor="#ECD563"  marginRight={2}/>
              <Text fontSize={15} bold>
@@ -217,7 +217,7 @@ const DetailScreen = ({ route}) => {
 
             
          </Box> 
-         <VStack alignSelf= 'center'  w={310} h={67} marginTop={19} marginBottom={20}>
+         <VStack alignSelf= 'center'  w={310} h={75} marginTop={19} marginBottom={20}>
          <HStack >
              <Box w={2} h={5} bgColor="#ECD563" marginRight={2}/>
              <Text fontSize={15} bold>

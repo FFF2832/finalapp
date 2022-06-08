@@ -154,7 +154,7 @@ const AlbumDetail = ({ album, navigation }) => {
   
   useEffect(()=>{
     if(liked==true){
-      dispatch(addToCart(album));
+    
       Animated.spring(currentValue,{
         toValue:2,
         friction:2,
@@ -260,7 +260,7 @@ const AlbumDetail = ({ album, navigation }) => {
                        
                       }
                       //likestate?dispatch(removeItem(album)):dispatch(addToCart(album));
-                     
+                      dispatch(addToCart(album));
                     }}
                     />
 
